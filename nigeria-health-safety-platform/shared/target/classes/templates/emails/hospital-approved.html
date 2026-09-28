@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head><meta charset="UTF-8"/><title>Hospital Approved</title></head>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:40px 0;">
+  <table width="600" style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
+    <tr><td style="background:#1a1a2e;padding:30px;text-align:center;">
+      <h1 style="color:#fff;margin:0;">🏥 Nigeria Health &amp; Safety Platform</h1></td></tr>
+    <tr><td style="padding:40px 30px;">
+      <h2 style="color:#008751;">✅ Hospital Registration Approved!</h2>
+      <p style="color:#555;">Dear <strong th:text="${adminName}">Admin</strong>,</p>
+      <p style="color:#555;">We are pleased to inform you that <strong th:text="${hospitalName}">Hospital</strong> has been approved and is now live on the Nigeria Health &amp; Safety Platform Blood Bank Network.</p>
+      <p style="color:#555;">You can now:</p>
+      <ul style="color:#555;line-height:1.8;">
+        <li>Update your blood stock levels</li>
+        <li>Respond to blood requests from other hospitals</li>
+        <li>Receive alerts when critically needed blood types are requested near you</li>
+      </ul>
+      <p style="color:#555;">Log in to your dashboard to get started.</p>
+    </td></tr>
+    <tr><td style="background:#f8f8f8;padding:20px;text-align:center;border-top:1px solid #eee;">
+      <p style="color:#aaa;font-size:12px;margin:0;">© 2025 Nigeria Health &amp; Safety Platform</p></td></tr>
+  </table>
+</td></tr></table>
+</body></html>

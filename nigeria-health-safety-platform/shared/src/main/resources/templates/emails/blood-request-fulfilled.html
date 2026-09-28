@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head><meta charset="UTF-8"/><title>Blood Request Fulfilled</title></head>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:40px 0;">
+  <table width="600" style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
+    <tr><td style="background:#008751;padding:30px;text-align:center;">
+      <h1 style="color:#fff;margin:0;">✅ Blood Request Fulfilled!</h1></td></tr>
+    <tr><td style="padding:40px 30px;">
+      <p style="color:#555;">Great news! Your blood request has been fulfilled.</p>
+      <table width="100%" style="border-collapse:collapse;margin:20px 0;">
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;width:40%;">Blood Type</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${bloodType}">O+</td></tr>
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;">Units</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${unitsNeeded}">2</td></tr>
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;">Fulfilled By</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${fulfilledBy}">National Hospital</td></tr>
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;">Contact Email</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${contactEmail}">admin@hospital.ng</td></tr>
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;">Contact Phone</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${contactPhone}">08012345678</td></tr>
+      </table>
+      <p style="color:#555;">Please contact the fulfilling hospital to arrange collection. Every donation saves lives. 🇳🇬</p>
+    </td></tr>
+    <tr><td style="background:#f8f8f8;padding:20px;text-align:center;border-top:1px solid #eee;">
+      <p style="color:#aaa;font-size:12px;margin:0;">© 2025 Nigeria Health &amp; Safety Platform</p></td></tr>
+  </table>
+</td></tr></table>
+</body></html>

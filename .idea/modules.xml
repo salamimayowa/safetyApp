@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/nigeria-health-safety-platform.iml" filepath="$PROJECT_DIR$/.idea/nigeria-health-safety-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nigeria-health-safety-platform/shared/shared.iml" filepath="$PROJECT_DIR$/nigeria-health-safety-platform/shared/shared.iml" />
+    </modules>
+  </component>
+</project>

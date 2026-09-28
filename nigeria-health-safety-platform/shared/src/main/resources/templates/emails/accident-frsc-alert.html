@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head><meta charset="UTF-8"/><title>Accident Alert</title></head>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:40px 0;">
+  <table width="600" style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
+    <tr><td style="background:#e74c3c;padding:30px;text-align:center;">
+      <h1 style="color:#fff;margin:0;">🚨 ACCIDENT REPORTED — IMMEDIATE ACTION REQUIRED</h1></td></tr>
+    <tr><td style="padding:40px 30px;">
+      <div style="background:#fff5f5;border:2px solid #e74c3c;border-radius:8px;padding:15px;margin-bottom:25px;">
+        <p style="margin:0;color:#e74c3c;font-weight:bold;font-size:18px;">Severity: <span th:text="${severity}">FATAL</span></p>
+        <p style="margin:5px 0 0;color:#555;">Reference: <strong th:text="${reportReference}">ACC-2025-00001</strong></p>
+      </div>
+      <table width="100%" style="border-collapse:collapse;">
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;width:40%;">Location</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${location}">Lagos-Ibadan Expressway KM 34</td></tr>
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;">Casualties</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${casualties}">3</td></tr>
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;">Reporter Phone</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${reporterPhone}">08012345678</td></tr>
+      </table>
+      <p style="color:#e74c3c;font-weight:bold;margin-top:20px;">⏱ Please dispatch your nearest unit IMMEDIATELY and acknowledge this report on the platform.</p>
+    </td></tr>
+    <tr><td style="background:#f8f8f8;padding:20px;text-align:center;border-top:1px solid #eee;">
+      <p style="color:#aaa;font-size:12px;margin:0;">© 2025 Nigeria Health &amp; Safety Platform</p></td></tr>
+  </table>
+</td></tr></table>
+</body></html>

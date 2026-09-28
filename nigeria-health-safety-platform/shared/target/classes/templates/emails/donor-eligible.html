@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head><meta charset="UTF-8"/><title>You Can Donate Again</title></head>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:40px 0;">
+  <table width="600" style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
+    <tr><td style="background:#008751;padding:30px;text-align:center;">
+      <h1 style="color:#fff;margin:0;">🩸 You Can Donate Blood Again!</h1></td></tr>
+    <tr><td style="padding:40px 30px;">
+      <p style="color:#555;font-size:16px;">Dear <strong th:text="${donorName}">Donor</strong>,</p>
+      <p style="color:#555;">It has been 56 days since your last donation on <strong th:text="${lastDonationDate}">2025-01-01</strong>. You are now eligible to donate blood again! 💪</p>
+      <div style="background:#f0f9f4;border-left:4px solid #008751;padding:20px;border-radius:4px;margin:20px 0;text-align:center;">
+        <p style="color:#008751;font-size:20px;font-weight:bold;margin:0;">1 donation = up to 3 lives saved 🇳🇬</p>
+      </div>
+      <p style="color:#555;">Log in to the platform to book your next donation appointment at a hospital near you.</p>
+      <p style="color:#555;">Thank you for being a hero to someone you'll never meet.</p>
+    </td></tr>
+    <tr><td style="background:#f8f8f8;padding:20px;text-align:center;border-top:1px solid #eee;">
+      <p style="color:#aaa;font-size:12px;margin:0;">© 2025 Nigeria Health &amp; Safety Platform</p></td></tr>
+  </table>
+</td></tr></table>
+</body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head><meta charset="UTF-8"/><title>Emergency — Casualties Near You</title></head>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:40px 0;">
+  <table width="600" style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
+    <tr><td style="background:#c0392b;padding:30px;text-align:center;">
+      <h1 style="color:#fff;margin:0;">🏥 EMERGENCY — Casualties Reported Near You</h1></td></tr>
+    <tr><td style="padding:40px 30px;">
+      <p style="color:#555;">Dear <strong th:text="${hospitalName}">Hospital</strong> team,</p>
+      <p style="color:#555;">A road accident has been reported near your location. Please prepare to receive casualties.</p>
+      <table width="100%" style="border-collapse:collapse;margin:20px 0;">
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;width:40%;">Number of Casualties</td>
+            <td style="padding:10px;border:1px solid #eee;color:#c0392b;font-weight:bold;" th:text="${casualties}">3</td></tr>
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;">Blood Type Needed</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${bloodTypeNeeded}">O+</td></tr>
+        <tr><td style="padding:10px;background:#f9f9f9;border:1px solid #eee;font-weight:bold;">Accident Location</td>
+            <td style="padding:10px;border:1px solid #eee;" th:text="${accidentLocation}">Lagos-Ibadan Expressway KM 34</td></tr>
+      </table>
+      <p style="color:#c0392b;font-weight:bold;">⚡ Please prepare your emergency team and ensure blood stock for the above type is ready.</p>
+    </td></tr>
+    <tr><td style="background:#f8f8f8;padding:20px;text-align:center;border-top:1px solid #eee;">
+      <p style="color:#aaa;font-size:12px;margin:0;">© 2025 Nigeria Health &amp; Safety Platform</p></td></tr>
+  </table>
+</td></tr></table>
+</body></html>

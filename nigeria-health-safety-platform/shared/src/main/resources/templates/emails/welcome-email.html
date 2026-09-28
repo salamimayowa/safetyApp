@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head><meta charset="UTF-8"/><title>Welcome</title></head>
+<body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:40px 0;">
+  <table width="600" cellpadding="0" cellspacing="0"
+         style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);">
+    <tr><td style="background:#1a1a2e;padding:30px;text-align:center;">
+      <h1 style="color:#fff;margin:0;font-size:22px;">🏥 Nigeria Health &amp; Safety Platform</h1>
+    </td></tr>
+    <tr><td style="padding:40px 30px;">
+      <h2 style="color:#1a1a2e;">Welcome, <span th:text="${userName}">User</span>! 🎉</h2>
+      <p style="color:#555;font-size:15px;">
+        Your account has been verified successfully. You are registered as:
+      </p>
+      <div style="background:#f0f9f4;border-left:4px solid #008751;padding:15px;margin:20px 0;border-radius:4px;">
+        <strong style="color:#008751;font-size:18px;" th:text="${role}">CITIZEN</strong>
+      </div>
+      <p style="color:#555;">You can now log in and use the platform to:</p>
+      <ul style="color:#555;line-height:1.8;">
+        <li>Search for blood banks near you</li>
+        <li>Report road accidents and get help fast</li>
+        <li>Verify drug authenticity before use</li>
+      </ul>
+      <p style="color:#555;">Together, we are building a safer Nigeria. 🇳🇬</p>
+    </td></tr>
+    <tr><td style="background:#f8f8f8;padding:20px;text-align:center;border-top:1px solid #eee;">
+      <p style="color:#aaa;font-size:12px;margin:0;">© 2025 Nigeria Health &amp; Safety Platform</p>
+    </td></tr>
+  </table>
+</td></tr></table>
+</body>
+</html>
