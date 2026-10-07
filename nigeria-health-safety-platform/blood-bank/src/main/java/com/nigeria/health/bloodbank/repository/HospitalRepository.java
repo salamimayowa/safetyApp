@@ -20,7 +20,7 @@ public interface HospitalRepository extends JpaRepository<Hospital, UUID> {
 
     Page<Hospital> findByIsApprovedFalse(Pageable pageable);
 
-    Optional<Hospital> findByAdminUserId(UUID adminUserId);
+    Optional<Hospital> findFirstByAdminUserId(UUID adminUserId);
 
     List<Hospital> findByStateAndIsApprovedTrue(String state);
 

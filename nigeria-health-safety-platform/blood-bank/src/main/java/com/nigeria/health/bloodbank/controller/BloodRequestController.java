@@ -49,7 +49,7 @@ public class BloodRequestController {
             @Valid @RequestBody BloodRequestCreateRequest req,
             @AuthenticationPrincipal User currentUser) {
 
-        Hospital hospital = hospitalRepository.findByAdminUserId(currentUser.getId())
+        Hospital hospital = hospitalRepository.findFirstByAdminUserId(currentUser.getId())
                 .orElseThrow(() -> new ResourceNotFoundException(
                         "No hospital found for your account. Please register your hospital first."));
 
@@ -97,7 +97,8 @@ public class BloodRequestController {
             @PathVariable UUID id,
             @AuthenticationPrincipal User currentUser) {
 
-        Hospital hospital = hospitalRepository.findByAdminUserId(currentUser.getId())
+        // Find the hospital associated with the current user
+        Hospital hospital = hospitalRepository.findFirstByAdminUserId(currentUser.getId())      
                 .orElseThrow(() -> new ResourceNotFoundException(
                         "No hospital found for your account"));
 
