@@ -7,18 +7,21 @@ RUN apk add --no-cache maven
 # Set working directory
 WORKDIR /app
 
-# Copy entire project
-COPY . .
+# Copy entire project into /app
+COPY . /app/
 
-# Build the parent first, then blood-bank
-RUN mvn clean install -DskipTests
+# List files to confirm they are there (for debugging)
+RUN ls -la /app/
+
+# Build the entire project
+RUN mvn -f /app/pom.xml clean install -DskipTests
 
 # Stage 2 — Run
 FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 
-# Copy the built JAR
+# Copy the built JAR from builder
 COPY --from=builder /app/blood-bank/target/blood-bank-1.0.0.jar app.jar
 
 # Expose port
