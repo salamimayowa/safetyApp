@@ -2,4 +2,4 @@
 **/application-dev.yml
 
 # Maven build output
-**/target/
+target/
