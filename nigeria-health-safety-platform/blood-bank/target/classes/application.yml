@@ -5,24 +5,20 @@ spring:
   application:
     name: nigeria-health-blood-bank
 
+  profiles:
+    default: dev            # used when no profile is set
+
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:nigeria_health_db}
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
     hikari:
-      maximum-pool-size: 10
-      minimum-idle: 2
+      maximum-pool-size: 5
+      minimum-idle: 1
       connection-timeout: 30000
 
   jpa:
     hibernate:
-      ddl-auto: validate   # Flyway manages schema — JPA only validates
+      ddl-auto: validate
     show-sql: false
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
 
   flyway:
     enabled: true
@@ -32,8 +28,6 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${MAIL_USERNAME}       # your Gmail address
-    password: ${MAIL_PASSWORD}       # Gmail App Password (not your real password)
     properties:
       mail:
         smtp:
@@ -59,28 +53,15 @@ spring:
     pool:
       size: 4
 
-# ─── Custom App Config ──────────────────────────────────────────
-
 app:
   jwt:
-    secret: ${JWT_SECRET}                    # Base64 encoded 256-bit secret key
-    access-token-expiry-ms: 86400000         # 24 hours
-    refresh-token-expiry-ms: 604800000       # 7 days
-
+    access-token-expiry-ms: 86400000
+    refresh-token-expiry-ms: 604800000
   termii:
-    api-key: ${TERMII_API_KEY}
-    sender-id: NijaHealth                    # max 11 chars, registered on Termii
-
-  cloudinary:
-    cloud-name: ${CLOUDINARY_CLOUD_NAME}
-    api-key: ${CLOUDINARY_API_KEY}
-    api-secret: ${CLOUDINARY_API_SECRET}
-
+    sender-id: NijaHealth
   otp:
     expiry-minutes: 10
     max-attempts: 3
-
-# ─── Springdoc / Swagger ────────────────────────────────────────
 
 springdoc:
   api-docs:
@@ -89,12 +70,6 @@ springdoc:
     path: /swagger-ui.html
     operations-sorter: method
     tags-sorter: alpha
-  info:
-    title: Nigeria Health & Safety Platform — Blood Bank API
-    description: Blood stock management, donor registry, and blood request matching
-    version: 1.0.0
-
-# ─── Logging ────────────────────────────────────────────────────
 
 logging:
   level:

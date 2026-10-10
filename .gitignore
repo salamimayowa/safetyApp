@@ -1,0 +1,5 @@
+# Local dev configs — have real passwords, never push to GitHub
+**/application-dev.yml
+
+# Maven build output
+**/target/
